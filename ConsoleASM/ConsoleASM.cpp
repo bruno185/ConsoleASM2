@@ -25,7 +25,7 @@ int main()
 {
     int i = 5;
     int j = 8;
-    const int maxtab = 20;
+    const int maxtab = 40000;
     string myStr = "ABCD";
     // myStr = myStr + myStr + "   ";
 
@@ -63,18 +63,26 @@ int main()
         //myNum[i] = maxtab - i;
     }
 
+    bool dispalylist = false;
+
     cout << endl << "Bubble Sort" << endl;
     cout << "************* AVANT TRI *************" << endl;
-    for (i = 0; i < maxtab; i++) {
-        cout << " BubbleSort " << i << " : " << myNum[i] << endl;
+    
+    if (dispalylist) {
+        for (i = 0; i < maxtab; i++) {
+            cout << " BubbleSort " << i << " : " << myNum[i] << endl;
+        }
     }
+
     BubbleSort(myNum, maxtab);
 
     cout << "************* APRES TRI *************" << endl;
-    for (i = 0; i < maxtab; i++) {
-        cout << " BubbleSort " << i << " : " << myNum[i] << endl;
-    }
 
+    if (dispalylist) {
+        for (i = 0; i < maxtab; i++) {
+            cout << " BubbleSort " << i << " : " << myNum[i] << endl;
+        }
+    }
 
     cout << "*************** FIN DU PROGRAMME ***************" << endl;
    
